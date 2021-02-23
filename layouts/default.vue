@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <main class="max-w-full xs:w-11/12 mx-auto max-w-screen-xl">
     <Nuxt />
-  </div>
+  </main>
 </template>
 
 <style>
@@ -51,5 +51,10 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+body {
+  max-width: 100vw;
+  background-color: #222;
 }
 </style>
