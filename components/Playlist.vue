@@ -26,8 +26,8 @@
     <button
       v-if="showVideos.length - count >= 0"
       type="button"
-      class="mx-auto mt-4 block text-white bg-gray-600 font-bold text-xs px-4 py-2 rounded-full shadow hover:bg-gray-700"
-      style="transition: all 0.15s ease"
+      class="mx-auto mt-4 block bg-primary font-bold text-xs px-4 py-2 rounded-full shadow hover:bg-yellow-200"
+      style="transition: all 0.3s ease"
       @click="isMore"
     >
       もっと見る
