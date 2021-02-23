@@ -1,6 +1,8 @@
 <template>
   <section class="mt-12">
-    <h1 class="text-xl font-bold text-white text-center xs:text-left">
+    <h1
+      class="text-xl font-bold text-white text-center xs:text-left border-b-2 border-primary"
+    >
       {{ title }}
     </h1>
     <div
@@ -105,7 +107,7 @@ export default {
     handleResize() {
       if (window.innerWidth > this.screens.lg) {
         this.current = 4
-        this.count = 4
+        this.count = 8
       } else if (window.innerWidth > this.screens.md) {
         this.current = 6
         this.count = 6
