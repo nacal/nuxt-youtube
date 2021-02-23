@@ -15,6 +15,11 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
+    backgroundColor: (theme) => ({
+      ...theme('colors'),
+      primary: '#ffdf00',
+      secondary: '#c30e23',
+    }),
   },
   variants: {
     extend: {},
