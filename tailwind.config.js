@@ -20,6 +20,11 @@ module.exports = {
       primary: '#ffdf00',
       secondary: '#c30e23',
     }),
+    borderColor: (theme) => ({
+      ...theme('colors'),
+      primary: '#ffdf00',
+      secondary: '#c30e23',
+    }),
   },
   variants: {
     extend: {},
