@@ -1,8 +1,10 @@
 <template>
   <section class="mt-12">
-    <h1 class="text-xl font-bold text-white">{{ title }}</h1>
+    <h1 class="text-xl font-bold text-white text-center xs:text-left">
+      {{ title }}
+    </h1>
     <div
-      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4"
+      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6"
     >
       <article v-for="(movie, index) in showVideos" :key="index">
         <div class="bg-white shadow rounded">
@@ -26,7 +28,7 @@
     <button
       v-if="showVideos.length - count >= 0"
       type="button"
-      class="mx-auto mt-4 block bg-primary font-bold text-xs px-4 py-2 rounded-full shadow hover:bg-yellow-200"
+      class="mx-auto mt-6 block bg-primary font-bold text-xs px-4 py-2 rounded shadow hover:bg-yellow-200"
       style="transition: all 0.3s ease"
       @click="isMore"
     >
