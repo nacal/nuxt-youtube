@@ -7,7 +7,10 @@
       class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6"
     >
       <article v-for="(movie, index) in showVideos" :key="index">
-        <div class="bg-white shadow rounded">
+        <div
+          v-if="movie.snippet.title != 'Private video'"
+          class="bg-white shadow rounded"
+        >
           <a
             :href="
               'https://www.youtube.com/watch?v=' +
