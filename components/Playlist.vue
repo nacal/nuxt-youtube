@@ -29,7 +29,7 @@
       </article>
     </div>
     <button
-      v-if="showVideos.length - count >= 0"
+      v-if="showVideos.length - current >= 0"
       type="button"
       class="mx-auto mt-6 block bg-primary font-bold text-xs px-4 py-2 rounded shadow hover:bg-yellow-200"
       style="transition: all 0.3s ease"
@@ -57,7 +57,8 @@ export default {
   data() {
     return {
       videos: '',
-      count: 8,
+      current: 0,
+      count: 0,
       params: {
         part: 'snippet',
         playlistId: this.playlist,
@@ -77,7 +78,7 @@ export default {
   computed: {
     showVideos() {
       const videos = this.videos
-      return videos.slice(0, this.count)
+      return videos.slice(0, this.current)
     },
   },
   created() {
@@ -99,17 +100,21 @@ export default {
   },
   methods: {
     isMore() {
-      this.count += this.count
+      this.current += this.count
     },
     handleResize() {
       if (window.innerWidth > this.screens.lg) {
+        this.current = 4
         this.count = 4
       } else if (window.innerWidth > this.screens.md) {
+        this.current = 6
         this.count = 6
       } else if (window.innerWidth > this.screens.xs) {
+        this.current = 4
         this.count = 4
       } else {
-        this.count = 2
+        this.current = 2
+        this.count = 4
       }
     },
   },
