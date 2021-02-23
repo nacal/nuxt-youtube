@@ -98,13 +98,13 @@ export default {
     },
     handleResize() {
       if (window.innerWidth > this.screens.lg) {
-        this.count = 8
-      } else if (window.innerWidth > this.screens.md) {
-        this.count = 9
-      } else if (window.innerWidth > this.screens.xs) {
-        this.count = 6
-      } else {
         this.count = 4
+      } else if (window.innerWidth > this.screens.md) {
+        this.count = 6
+      } else if (window.innerWidth > this.screens.xs) {
+        this.count = 4
+      } else {
+        this.count = 2
       }
     },
   },
