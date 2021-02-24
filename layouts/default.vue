@@ -1,7 +1,11 @@
 <template>
-  <main class="max-w-full xs:w-11/12 mx-auto max-w-screen-xl">
-    <Nuxt />
-  </main>
+  <div>
+    <Header />
+    <main class="w-full xs:w-11/12 mx-auto max-w-screen-xl mb-12">
+      <Nuxt />
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <style>
