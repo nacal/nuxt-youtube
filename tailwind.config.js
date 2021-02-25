@@ -19,6 +19,7 @@ module.exports = {
       ...theme('colors'),
       primary: '#ffdf00',
       secondary: '#c30e23',
+      base: '#222',
     }),
     borderColor: (theme) => ({
       ...theme('colors'),
