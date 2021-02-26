@@ -6,7 +6,7 @@ module.exports = {
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     screens: {
       xs: '420px',
@@ -19,6 +19,7 @@ module.exports = {
       ...theme('colors'),
       primary: '#ffdf00',
       secondary: '#c30e23',
+      base: '#222',
     }),
     borderColor: (theme) => ({
       ...theme('colors'),
