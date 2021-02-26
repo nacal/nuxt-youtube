@@ -1,7 +1,7 @@
 <template>
   <section class="mt-12">
     <h1
-      class="text-xl font-bold text-white text-center xs:text-left border-b-2 border-primary"
+      class="text-xl font-bold _text text-center xs:text-left border-b-2 border-primary"
     >
       {{ title }}
     </h1>
@@ -11,7 +11,7 @@
       <article v-for="(movie, index) in showVideos" :key="index">
         <div
           v-if="movie.snippet.title != 'Private video'"
-          class="bg-white shadow rounded"
+          class="_bg-card shadow rounded"
         >
           <a
             :href="
@@ -22,7 +22,7 @@
           >
             <img :src="movie.snippet.thumbnails.medium.url" class="w-full" />
             <div class="p-3">
-              <p class="text-sm text-gray-600 mb-2 h-10 overflow-clamp">
+              <p class="text-sm _text mb-2 h-10 overflow-clamp">
                 {{ movie.snippet.title }}
               </p>
             </div>
