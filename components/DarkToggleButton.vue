@@ -8,7 +8,7 @@
         type="checkbox"
         name="toggle"
         class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer outline-none transform transition duration-500"
-        :checked="isDark"
+        :checked="dark"
         @click="toggleDarkMode()"
       />
       <label
@@ -21,30 +21,35 @@
 
 <script>
 export default {
-  props: {
-    isTheme: {
-      type: String,
-      default: 'light',
-    },
-    isDark: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
-      currentTheme: this.isTheme,
-      currentDark: this.isDark,
+      theme: 'light',
+      dark: true,
+    }
+  },
+  mounted() {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+      this.theme = 'dark'
+      this.dark = true
+    } else {
+      document.documentElement.classList.remove('dark')
+      this.theme = 'right'
+      this.dark = false
     }
   },
   methods: {
     toggleDarkMode() {
-      if (this.currentTheme === 'dark') {
+      if (this.theme === 'dark') {
         document.documentElement.classList.remove('dark')
-        this.currentTheme = 'light'
+        this.theme = 'light'
       } else {
         document.documentElement.classList.add('dark')
-        this.currentTheme = 'dark'
+        this.theme = 'dark'
       }
     },
   },
