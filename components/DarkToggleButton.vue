@@ -40,7 +40,7 @@ export default {
       this.dark = true
     } else {
       document.documentElement.classList.remove('dark')
-      this.theme = 'right'
+      this.theme = 'light'
       this.dark = false
     }
   },
