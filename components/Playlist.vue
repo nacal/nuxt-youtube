@@ -1,10 +1,11 @@
 <template>
   <section class="mt-12">
-    <h1
-      class="text-xl font-bold _text text-center xs:text-left border-b-2 border-primary"
-    >
-      {{ title }}
-    </h1>
+    <div class="flex border-b-2 border-primary">
+      <h1 class="text-xl font-bold _text text-center xs:text-left">
+        {{ title }}
+      </h1>
+      <a :href="channelURL + channelId" target="blank" class="ml-2"><Link /></a>
+    </div>
     <div
       class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6"
     >
@@ -59,6 +60,7 @@ export default {
   data() {
     return {
       videos: '',
+      channelId: '',
       current: 0,
       count: 0,
       params: {
@@ -75,6 +77,7 @@ export default {
         lg: 1024,
         xl: 1280,
       },
+      channelURL: 'https://www.youtube.com/channel/',
     }
   },
   computed: {
@@ -91,6 +94,7 @@ export default {
       })
       .then(function (res) {
         self.videos = res.data.items
+        self.channelId = res.data.items[0].snippet.channelId
       })
   },
   mounted() {
