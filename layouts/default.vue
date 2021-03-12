@@ -13,15 +13,26 @@ export default {}
 </script>
 
 <style lang="postcss">
+._text,
+._bg,
+._bg-card,
+._bg-banner {
+  @apply transition duration-500;
+}
+
 ._text {
-  @apply dark:text-white transition duration-500;
+  @apply dark:text-white;
 }
 
 ._bg {
-  @apply bg-gray-200 dark:bg-gray-800 transition duration-500;
+  @apply bg-base dark:bg-baseDark;
 }
 
 ._bg-card {
-  @apply bg-gray-100 dark:bg-gray-700 transition duration-500;
+  @apply bg-gray-100 dark:bg-gray-700;
+}
+
+._bg-banner {
+  @apply bg-white dark:bg-bannerDark;
 }
 </style>

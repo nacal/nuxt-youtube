@@ -1,8 +1,8 @@
 <template>
   <header
-    class="w-full bg-primary py-4 flex justify-center align-center relative"
+    class="w-full _bg-banner py-4 flex justify-center align-center relative"
   >
-    <h1 class="text-xl font-bold text-center">NewRadio</h1>
+    <h1 class="text-xl font-bold text-center _text">NewRadio</h1>
     <DarkToggleButton class="absolute right-0" />
   </header>
 </template>
