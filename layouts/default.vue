@@ -32,7 +32,8 @@ export default {}
   @apply bg-gray-100 dark:bg-gray-700;
 }
 
-._bg-banner {
+._bg-banner,
+body {
   @apply bg-white dark:bg-bannerDark;
 }
 </style>
