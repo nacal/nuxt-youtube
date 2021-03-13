@@ -1,7 +1,9 @@
 <template>
-  <section class="mt-12">
-    <div class="flex border-b-2 border-primary">
-      <h1 class="text-xl font-bold _text text-center xs:text-left">
+  <section
+    class="mt-6 border-b-4 border-black border-opacity-20 dark:border-white dark:border-opacity-20 transform transition duration-500"
+  >
+    <div class="flex ml-2">
+      <h1 class="text-xl font-medium _text text-center xs:text-left">
         {{ title }}
       </h1>
       <a :href="channelURL + channelId" target="blank" class="ml-2"><Link /></a>
