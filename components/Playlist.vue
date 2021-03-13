@@ -7,13 +7,10 @@
       <a :href="channelURL + channelId" target="blank" class="ml-2"><Link /></a>
     </div>
     <div
-      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6"
+      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 mt-6"
     >
       <article v-for="(movie, index) in showVideos" :key="index">
-        <div
-          v-if="movie.snippet.title != 'Private video'"
-          class="_bg-card shadow rounded"
-        >
+        <div v-if="movie.snippet.title != 'Private video'">
           <a
             :href="
               'https://www.youtube.com/watch?v=' +
@@ -23,7 +20,7 @@
           >
             <img :src="movie.snippet.thumbnails.medium.url" class="w-full" />
             <div class="p-3">
-              <p class="text-sm _text mb-2 h-10 overflow-clamp">
+              <p class="text-sm font-medium _text mb-2 h-10 overflow-clamp">
                 {{ movie.snippet.title }}
               </p>
             </div>
