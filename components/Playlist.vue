@@ -7,7 +7,7 @@
       <a :href="channelURL + channelId" target="blank" class="ml-2"><Link /></a>
     </div>
     <div
-      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-10 mt-6"
+      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-2 mt-6"
     >
       <article v-for="(movie, index) in showVideos" :key="index">
         <div v-if="movie.snippet.title != 'Private video'">
@@ -31,11 +31,11 @@
     <button
       v-if="showVideos.length - current >= 0"
       type="button"
-      class="mx-auto mt-6 block bg-primary font-bold text-xs px-4 py-2 rounded shadow hover:bg-yellow-200"
+      class="w-full mt-6 py-2 flex justify-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10 transform"
       style="transition: all 0.3s ease"
       @click="isMore"
     >
-      もっと見る
+      <More />
     </button>
   </section>
 </template>
