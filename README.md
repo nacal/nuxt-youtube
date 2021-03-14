@@ -1,20 +1,18 @@
-# vue-youtube
+# NewRadio
 
-## Build Setup
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-```bash
-# install dependencies
-$ yarn install
+<img width="1265" alt="ニューラジオトップページ" src="https://user-images.githubusercontent.com/55532835/111054064-b4f30980-84ac-11eb-8c4e-39d56b528167.png">
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+> [NewRadio](https://nuxt-youtube.vercel.app/)
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+## Overview
 
-# generate static project
-$ yarn generate
-```
+ニューラジオファンサイト
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Assets
+- [YouTube Data API](https://developers.google.cn/youtube/v3/getting-started?hl=ja)
+- [Vue.js](https://vuejs.org/)
+  - [Nuxt.js](https://nuxtjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://app.netlify.com/)

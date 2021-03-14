@@ -5,13 +5,13 @@
         id="toggle"
         type="checkbox"
         name="toggle"
-        class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-gray-200 border-4 border-gray-700 appearance-none cursor-pointer outline-none transform transition duration-500"
+        class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-base border-4 appearance-none cursor-pointer outline-none transform transition duration-500"
         :checked="dark"
         @click="toggleDarkMode()"
       />
       <label
         for="toggle"
-        class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-200 border-2 border-gray-700 cursor-pointer transition duration-500"
+        class="toggle-label block overflow-hidden h-6 rounded-full bg-base border-2 cursor-pointer transition duration-500"
       ></label>
     </div>
     <transition name="fade" mode="out-in">
@@ -62,11 +62,11 @@ export default {
 
 <style lang="postcss" scoped>
 .toggle-checkbox:checked {
-  @apply translate-x-4 bg-gray-800 border-gray-100;
+  @apply translate-x-4 bg-baseDark border-white;
 }
 
 .toggle-checkbox:checked + .toggle-label {
-  @apply bg-gray-800 border-gray-100;
+  @apply bg-baseDark border-white;
 }
 
 .fade-enter-active,
