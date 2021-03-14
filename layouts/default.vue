@@ -15,7 +15,6 @@ export default {}
 <style lang="postcss">
 ._text,
 ._bg,
-._bg-card,
 ._bg-banner {
   @apply transition duration-500;
 }
@@ -26,10 +25,6 @@ export default {}
 
 ._bg {
   @apply bg-base dark:bg-baseDark;
-}
-
-._bg-card {
-  @apply bg-gray-100 dark:bg-gray-700;
 }
 
 ._bg-banner,
