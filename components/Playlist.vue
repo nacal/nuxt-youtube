@@ -1,6 +1,6 @@
 <template>
   <section
-    class="mt-6 border-b-4 border-black border-opacity-20 dark:border-white dark:border-opacity-20 transform transition duration-500"
+    class="mt-8 border-b-4 border-black border-opacity-20 dark:border-white dark:border-opacity-20 transform transition duration-500"
   >
     <div class="flex ml-2">
       <h1 class="text-xl font-medium _text text-center xs:text-left">
@@ -9,7 +9,7 @@
       <a :href="channelURL + channelId" target="blank" class="ml-2"><Link /></a>
     </div>
     <div
-      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-2 mt-6"
+      class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-2 mt-8"
     >
       <article v-for="(movie, index) in showVideos" :key="index">
         <div v-if="movie.snippet.title != 'Private video'">
@@ -33,7 +33,7 @@
     <button
       v-if="showVideos.length - current >= 0"
       type="button"
-      class="w-full mt-6 py-2 flex justify-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10 transform"
+      class="w-full py-2 flex justify-center hover:bg-black hover:bg-opacity-10 dark:hover:bg-white dark:hover:bg-opacity-10 transform"
       style="transition: all 0.3s ease"
       @click="isMore"
     >
